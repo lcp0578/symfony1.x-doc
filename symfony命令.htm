@@ -1,0 +1,516 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+	
+        symfony 命令详解
+     
+</title>
+
+</head>
+<body id="defaultuser">
+    <div id="csdnblog_allwrap">
+        <div id="csdnblog_midwrap">
+
+
+<div id="csdnblog_content">
+  <div class="gutter">
+		
+		<div class="default_contents">
+			<div class="user_article">
+
+				<h1 class="title_txt">			symfony 命令详解</h1>
+				<div class="blogstory">
+
+					
+
+					<p>/symfony list</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony [选项] 任务名 [参数]</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;dry-run -n Do a dry run without executing actions.<br />&nbsp;&nbsp;&nbsp; &ndash;help -H 显示帮助信息<br />&nbsp;&nbsp;&nbsp; &ndash;quiet -q Do not log messages to standard output.<br />&nbsp;&nbsp;&nbsp; &ndash;trace -t Turn on invoke/execute tracing, enable full backtrace.<br />&nbsp;&nbsp;&nbsp; &ndash;version -V 显示程序版本<br />&nbsp;&nbsp;&nbsp; 可用的任务:<br />&nbsp;&nbsp;&nbsp; help 显示任务的帮助信息 (简写h)</p>
+<p>&nbsp;&nbsp;&nbsp; list 列出任务</p>
+<p>&nbsp;&nbsp;&nbsp; app:routes 显示一个应用程序当前的路由信息</p>
+<p>&nbsp;&nbsp;&nbsp; cache:clear 清空缓存(简写cc, clear-cache)</p>
+<p>&nbsp;&nbsp;&nbsp; configure:author 设置项目作者<br />&nbsp;&nbsp;&nbsp; configure:database 设置数据库 DSN</p>
+<p>&nbsp;&nbsp;&nbsp; generate:app 初始化一个应用程序 (简写init-app)<br />&nbsp;&nbsp;&nbsp; generate:module 初始化一个模块 (简写init-module)<br />&nbsp;&nbsp;&nbsp; generate:project 初始化一个项目 (简写init-proj)<br />&nbsp;&nbsp;&nbsp; generate:task Creates a skeleton class for a new task</p>
+<p>&nbsp;&nbsp;&nbsp; i18n:extract Extracts i18n strings from php files<br />&nbsp;&nbsp;&nbsp; i18n:find Finds non &ldquo;i18n ready&rdquo; strings in an application</p>
+<p>&nbsp;&nbsp;&nbsp; log:clear 清空日志 (log-purge)<br />&nbsp;&nbsp;&nbsp; log:rotate Rotates an application log files (log-rotate)</p>
+<p>&nbsp;&nbsp;&nbsp; plugin:add-channel 添加一个新的PEAR频道<br />&nbsp;&nbsp;&nbsp; plugin:install 安装一个插件 (简写plugin-install)<br />&nbsp;&nbsp;&nbsp; plugin:list 列出已安装的插件 (简写plugin-list)<br />&nbsp;&nbsp;&nbsp; plugin:publish-assets 将全部插件的web目录发布到项目的web目录下<br />&nbsp;&nbsp;&nbsp; plugin:uninstall 卸载一个插件 (plugin-uninstall)<br />&nbsp;&nbsp;&nbsp; plugin:upgrade 升级一个插件(plugin-upgrade)</p>
+<p>&nbsp;&nbsp;&nbsp; project:clear-controllers Clears all non production environment controllers (clear-controllers)<br />&nbsp;&nbsp;&nbsp; project:deploy 发布一个项目到另外一台服务器 (sync)<br />&nbsp;&nbsp;&nbsp; project:disable 在指定环境下屏蔽一个应用程序 (disable)<br />&nbsp;&nbsp;&nbsp; project:enable 在指定环境下打开一个应用程序 (disable)<br />&nbsp;&nbsp;&nbsp; project:freeze 冻结 symfony 库文件 (简写freeze)<br />&nbsp;&nbsp;&nbsp; project:permissions 修改symfony项目目录的权限 (permissions, fix-perms)<br />&nbsp;&nbsp;&nbsp; project:unfreeze 解冻 symfony 库文件 (简写unfreeze)<br />&nbsp;&nbsp;&nbsp; project:upgrade1.1 将一个symfony项目升级到1.1<br />&nbsp;&nbsp;&nbsp; project:upgrade1.2 将一个symonfy项目从1.1升级到1.2</p>
+<p>&nbsp;&nbsp;&nbsp; propel:build-all 生成model,form,生成sql语句并创建数据库 (propel-build-all)<br />&nbsp;&nbsp;&nbsp; propel:build-all-load 生成model,form,生成sql语句,创建数据库并插入初始数据 (propel-build-all-load)<br />&nbsp;&nbsp;&nbsp; propel:build-filters 根据当前的模型创建过滤器<br />&nbsp;&nbsp;&nbsp; propel:build-forms 根据当前的模型创建表单<br />&nbsp;&nbsp;&nbsp; propel:build-model 根据数据库结构创建模型 (propel-build-model)<br />&nbsp;&nbsp;&nbsp; propel:build-schema 根据数据库结构创建schema (propel-build-schema)<br />&nbsp;&nbsp;&nbsp; propel:build-sql 根据当前模型创建一个SQL (简写propel-build-sql)<br />&nbsp;&nbsp;&nbsp; propel:data-dump 导出数据到 fixtures directory (propel-dump-data)<br />&nbsp;&nbsp;&nbsp; propel:data-load 从fixtures directory载入数据 (propel-load-data)<br />&nbsp;&nbsp;&nbsp; propel:generate-admin 自动生成一个module的后台<br />&nbsp;&nbsp;&nbsp; propel:generate-module Generates a Propel module (propel-generate-crud, propel:generate-crud)<br />&nbsp;&nbsp;&nbsp; propel:generate-module-for-route Generates a Propel module for a route definition<br />&nbsp;&nbsp;&nbsp; propel:graphviz Generates a graphviz chart of current object model<br />&nbsp;&nbsp;&nbsp; propel:init-admin 初始化一个module后台(propel-init-admin)<br />&nbsp;&nbsp;&nbsp; propel:insert-sql Inserts SQL for current model (propel-insert-sql)<br />&nbsp;&nbsp;&nbsp; propel:schema-to-xml 根据schema.yml生成schema.xml (propel-convert-yml-schema)<br />&nbsp;&nbsp;&nbsp; propel:schema-to-yml 根据schema.xml生成schema.yml (propel-convert-xml-schema)</p>
+<p>&nbsp;&nbsp;&nbsp; test:all 运行全部测试 (简写test-all)<br />&nbsp;&nbsp;&nbsp; test:coverage Outputs test code coverage<br />&nbsp;&nbsp;&nbsp; test:functional 运行全部功能测试 (简写test-functional)<br />&nbsp;&nbsp;&nbsp; test:unit 运行单元测试 (test-unit)</p>
+<p>./symfony help app:routes</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony app:routes application [name]</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; application The application name<br />&nbsp;&nbsp;&nbsp; name A route name</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The app:routes displays the current routes for a given application:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony app:routes frontend</p>
+<p>./symfony help cc</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony cache:clear [--app[="..."]] [--env[="..."]] [--type[="..."]]</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: cc, clear-cache</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;app The application name<br />&nbsp;&nbsp;&nbsp; &ndash;env The environment<br />&nbsp;&nbsp;&nbsp; &ndash;type The type (default: all)</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The cache:clear task clears the symfony cache.</p>
+<p>&nbsp;&nbsp;&nbsp; By default, it removes the cache for all available types, all applications,<br />&nbsp;&nbsp;&nbsp; and all environments.</p>
+<p>&nbsp;&nbsp;&nbsp; You can restrict by type, application, or environment:</p>
+<p>&nbsp;&nbsp;&nbsp; For example, to clear the frontend application cache:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony cache:clear &ndash;app=frontend</p>
+<p>&nbsp;&nbsp;&nbsp; To clear the cache for the prod environment for the frontend application:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony cache:clear &ndash;app=frontend &ndash;env=prod</p>
+<p>&nbsp;&nbsp;&nbsp; To clear the cache for all prod environments:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony cache:clear &ndash;env=prod</p>
+<p>&nbsp;&nbsp;&nbsp; To clear the config cache for all prod environments:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony cache:clear &ndash;type=config &ndash;env=prod</p>
+<p>&nbsp;&nbsp;&nbsp; The built-in types are: config, i18n, routing, module<br />&nbsp;&nbsp;&nbsp; and template.</p>
+<p>./symfony help configure:author</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony configure:author author</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; author The project author</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The configure:author task configures the author for a project:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony configure:author &ldquo;Fabien Potencier &lt;<a href="mailto:fabien.potencier@symfony-project.com">fabien.potencier@symfony-project.com</a>&gt;&rdquo;</p>
+<p>&nbsp;&nbsp;&nbsp; The author is used by the generates to pre-configure the PHPDoc header for each generated file.</p>
+<p>&nbsp;&nbsp;&nbsp; The value is stored in [config/properties.ini].</p>
+<p>./symfony help configure:database</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony configure:database [--env[="..."]] [--name[="..."]] [--class[="..."]] [--app[="..."]] dsn [username] [password]</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; dsn The database dsn<br />&nbsp;&nbsp;&nbsp; username The database username (default: root)<br />&nbsp;&nbsp;&nbsp; password The database password</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;env The environment (default: all)<br />&nbsp;&nbsp;&nbsp; &ndash;name The connection name (default: propel)<br />&nbsp;&nbsp;&nbsp; &ndash;class The database class name (default: sfPropelDatabase)<br />&nbsp;&nbsp;&nbsp; &ndash;app The application name</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The configure:database task configures the database DSN<br />&nbsp;&nbsp;&nbsp; for a project:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony configure:database mysql:host=localhost;dbname=example root mYsEcret</p>
+<p>&nbsp;&nbsp;&nbsp; By default, the task change the configuration for all environment. If you want<br />&nbsp;&nbsp;&nbsp; to change the dsn for a specific environment, use the env option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony configure:database &ndash;env=dev mysql:host=localhost;dbname=example_dev root mYsEcret</p>
+<p>&nbsp;&nbsp;&nbsp; To change the configuration for a specific application, use the app option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony configure:database &ndash;app=frontend mysql:host=localhost;dbname=example root mYsEcret</p>
+<p>&nbsp;&nbsp;&nbsp; You can also specify the connection name and the database class name:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony configure:database &ndash;name=main &ndash;class=sfDoctrineDatabase mysql:host=localhost;dbname=example root</p>
+<p>&nbsp;&nbsp;&nbsp; WARNING: The propel.ini file is also updated when you use a Propel database<br />&nbsp;&nbsp;&nbsp; and configure for all environments with no app.</p>
+<p>./symfony help generate:app</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony generate:app [--escaping-strategy="..."] [--csrf-secret="..."] application</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: init-app</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; application The application name</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;escaping-strategy Output escaping strategy (default: )<br />&nbsp;&nbsp;&nbsp; &ndash;csrf-secret Secret to use for CSRF protection (default: )</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The generate:app task creates the basic directory structure<br />&nbsp;&nbsp;&nbsp; for a new application in the current project:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony generate:app frontend</p>
+<p>&nbsp;&nbsp;&nbsp; This task also creates two front controller scripts in the<br />&nbsp;&nbsp;&nbsp; web/ directory:</p>
+<p>&nbsp;&nbsp;&nbsp; web/%application%.php for the production environment<br />&nbsp;&nbsp;&nbsp; web/%application%_dev.php for the development environment</p>
+<p>&nbsp;&nbsp;&nbsp; For the first application, the production environment script is named<br />&nbsp;&nbsp;&nbsp; index.php.</p>
+<p>&nbsp;&nbsp;&nbsp; If an application with the same name already exists,<br />&nbsp;&nbsp;&nbsp; it throws a sfCommandException.</p>
+<p>&nbsp;&nbsp;&nbsp; You can enable output escaping (to prevent XSS) by using the escaping-strategy option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony generate:app frontend &ndash;escaping-strategy=on</p>
+<p>&nbsp;&nbsp;&nbsp; You can enable session token in forms (to prevent CSRF) by defining<br />&nbsp;&nbsp;&nbsp; a secret with the csrf-secret option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony generate:app frontend &ndash;csrf-secret=UniqueSecret</p>
+<p>./symfony help generate:module</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony generate:module application module</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: init-module</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; application The application name<br />&nbsp;&nbsp;&nbsp; module The module name</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The generate:module task creates the basic directory structure<br />&nbsp;&nbsp;&nbsp; for a new module in an existing application:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony generate:module frontend article</p>
+<p>&nbsp;&nbsp;&nbsp; The task can also change the author name found in the actions.class.php<br />&nbsp;&nbsp;&nbsp; if you have configure it in config/properties.ini:</p>
+<p>&nbsp;&nbsp;&nbsp; [symfony]<br />&nbsp;&nbsp;&nbsp; name=blog<br />&nbsp;&nbsp;&nbsp; author=Fabien Potencier &lt;<a href="mailto:fabien.potencier@sensio.com">fabien.potencier@sensio.com</a>&gt;</p>
+<p>&nbsp;&nbsp;&nbsp; You can customize the default skeleton used by the task by creating a<br />&nbsp;&nbsp;&nbsp; %sf_data_dir%/skeleton/module directory.</p>
+<p>&nbsp;&nbsp;&nbsp; The task also creates a functional test stub named<br />&nbsp;&nbsp;&nbsp; %sf_test_dir%/functional/%application%/%module%ActionsTest.class.php<br />&nbsp;&nbsp;&nbsp; that does not pass by default.</p>
+<p>&nbsp;&nbsp;&nbsp; If a module with the same name already exists in the application,<br />&nbsp;&nbsp;&nbsp; it throws a sfCommandException.</p>
+<p>./symfony help generate:project</p>
+<p>&nbsp;&nbsp;&nbsp; 用方法:<br />&nbsp;&nbsp;&nbsp; symfony generate:project name</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: init-project</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; name The project name</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The generate:project task creates the basic directory structure<br />&nbsp;&nbsp;&nbsp; for a new project in the current directory:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony generate:project blog</p>
+<p>&nbsp;&nbsp;&nbsp; If the current directory already contains a symfony project,<br />&nbsp;&nbsp;&nbsp; it throws a sfCommandException.</p>
+<p>./symfony help generate:task</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony generate:task [--dir="..."] [--use-database="..."] [--brief-description="..."] task_name</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; task_name The task name (can contain namespace)</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;dir The directory to create the task in (default: lib/task)<br />&nbsp;&nbsp;&nbsp; &ndash;use-database Whether the task needs model initialization to access database (default: propel)<br />&nbsp;&nbsp;&nbsp; &ndash;brief-description A brief task description (appears in task list)</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The generate:task creates a new sfTask class based on the name passed as<br />&nbsp;&nbsp;&nbsp; argument:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony generate:task namespace:name</p>
+<p>&nbsp;&nbsp;&nbsp; The namespaceNameTask.class.php skeleton task is created under the lib/task/<br />&nbsp;&nbsp;&nbsp; directory. Note that the namespace is optional.</p>
+<p>&nbsp;&nbsp;&nbsp; If you want to create the file in another directory (relative to the project<br />&nbsp;&nbsp;&nbsp; root folder), pass it in the &ndash;dir option. This directory will be created<br />&nbsp;&nbsp;&nbsp; if it does not already exist.</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony generate:task namespace:name &ndash;dir=plugins/myPlugin/lib/task</p>
+<p>&nbsp;&nbsp;&nbsp; If you want the task to default to a connection other than propel, provide<br />&nbsp;&nbsp;&nbsp; the name of this connection with the &ndash;use-database option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony generate:task namespace:name &ndash;use-database=main</p>
+<p>&nbsp;&nbsp;&nbsp; The &ndash;use-database option can also be used to disable database<br />&nbsp;&nbsp;&nbsp; initialization in the generated task:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony generate:task namespace:name &ndash;use-database=false</p>
+<p>&nbsp;&nbsp;&nbsp; You can also specify a description:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony generate:task namespace:name &ndash;brief-description=&rdquo;Does interesting things&rdquo;</p>
+<p>./symfony help i18n:extract</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony i18n:extract [--display-new] [--display-old] [--auto-save] [--auto-delete] application culture</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; application The application name<br />&nbsp;&nbsp;&nbsp; culture The target culture</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;display-new Output all new found strings<br />&nbsp;&nbsp;&nbsp; &ndash;display-old Output all old strings<br />&nbsp;&nbsp;&nbsp; &ndash;auto-save Save the new strings<br />&nbsp;&nbsp;&nbsp; &ndash;auto-delete Delete old strings</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The i18n:extract task extracts i18n strings from your project files<br />&nbsp;&nbsp;&nbsp; for the given application and target culture:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony i18n:extract frontend fr</p>
+<p>&nbsp;&nbsp;&nbsp; By default, the task only displays the number of new and old strings<br />&nbsp;&nbsp;&nbsp; it found in the current project.</p>
+<p>&nbsp;&nbsp;&nbsp; If you want to display the new strings, use the &ndash;display-new option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony i18n:extract &ndash;display-new frontend fr</p>
+<p>&nbsp;&nbsp;&nbsp; To save them in the i18n message catalogue, use the &ndash;auto-save option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony i18n:extract &ndash;auto-save frontend fr</p>
+<p>&nbsp;&nbsp;&nbsp; If you want to display strings that are present in the i18n messages<br />&nbsp;&nbsp;&nbsp; catalogue but are not found in the application, use the<br />&nbsp;&nbsp;&nbsp; &ndash;display-old option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony i18n:extract &ndash;display-old frontend fr</p>
+<p>&nbsp;&nbsp;&nbsp; To automatically delete old strings, use the &ndash;auto-delete but<br />&nbsp;&nbsp;&nbsp; be careful, especially if you have translations for plugins as they will<br />&nbsp;&nbsp;&nbsp; appear as old strings but they are not:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony i18n:extract &ndash;auto-delete frontend fr</p>
+<p>./symfony help i18n:find</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony i18n:find [--env="..."] application</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; application The application name</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;env The environment (default: dev)</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The i18n:find task finds non internationalized strings embedded in templates:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony i18n:find frontend</p>
+<p>&nbsp;&nbsp;&nbsp; This task is able to find non internationalized strings in pure HTML and in PHP code:</p>
+<p>&nbsp;&nbsp;&nbsp; Non i18n text</p>
+<p>&nbsp;&nbsp;&nbsp; As the task returns all strings embedded in PHP, you can have some false positive (especially<br />&nbsp;&nbsp;&nbsp; if you use the string syntax for helper arguments).</p>
+<p>./symfony help log:clear</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony log:clear</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: log-purge</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The log:clear task clears all symfony log files:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony log:clear</p>
+<p>./symfony help log:rotate</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony log:rotate [--history="..."] [--period="..."] application env</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: log-rotate</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; application The application name<br />&nbsp;&nbsp;&nbsp; env The environment name</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;history The maximum number of old log files to keep (default: 10)<br />&nbsp;&nbsp;&nbsp; &ndash;period The period in days (default: 7)</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The log:rotate task rotates application log files for a given<br />&nbsp;&nbsp;&nbsp; environment:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony log:rotate frontend dev</p>
+<p>&nbsp;&nbsp;&nbsp; You can specify a period or a history option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony &ndash;history=10 &ndash;period=7 log:rotate frontend dev</p>
+<p>./symfony help plugin:add-channel</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony plugin:add-channel name</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; name The channel name</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The plugin:add-channel task adds a new PEAR channel:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony plugin:add-channel symfony.plugins.pear.example.com</p>
+<p>./symfony help plugin:install</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony plugin:install [--stability|-s="..."] [--release|-r="..."] [--channel|-c="..."] [--install_deps|-d] [--force-license] name</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: plugin-install</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; name The plugin name</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;stability (-s) The preferred stability (stable, beta, alpha)<br />&nbsp;&nbsp;&nbsp; &ndash;release (-r) The preferred version<br />&nbsp;&nbsp;&nbsp; &ndash;channel (-c) The PEAR channel name<br />&nbsp;&nbsp;&nbsp; &ndash;install_deps (-d) Whether to force installation of required dependencies<br />&nbsp;&nbsp;&nbsp; &ndash;force-license Whether to force installation even if the license is not MIT like</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The plugin:install task installs a plugin:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony plugin:install sfGuardPlugin</p>
+<p>&nbsp;&nbsp;&nbsp; By default, it installs the latest stable release.</p>
+<p>&nbsp;&nbsp;&nbsp; If you want to install a plugin that is not stable yet,<br />&nbsp;&nbsp;&nbsp; use the stability option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony plugin:install &ndash;stability=beta sfGuardPlugin<br />&nbsp;&nbsp;&nbsp; ./symfony plugin:install -s beta sfGuardPlugin</p>
+<p>&nbsp;&nbsp;&nbsp; You can also force the installation of a specific version:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony plugin:install &ndash;release=1.0.0 sfGuardPlugin<br />&nbsp;&nbsp;&nbsp; ./symfony plugin:install -r 1.0.0 sfGuardPlugin</p>
+<p>&nbsp;&nbsp;&nbsp; To force installation of all required dependencies, use the install_deps flag:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony plugin:install &ndash;install-deps sfGuardPlugin<br />&nbsp;&nbsp;&nbsp; ./symfony plugin:install -d sfGuardPlugin</p>
+<p>&nbsp;&nbsp;&nbsp; By default, the PEAR channel used is symfony-plugins<br />&nbsp;&nbsp;&nbsp; (plugins.symfony-project.org).</p>
+<p>&nbsp;&nbsp;&nbsp; You can specify another channel with the channel option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony plugin:install &ndash;channel=mypearchannel sfGuardPlugin<br />&nbsp;&nbsp;&nbsp; ./symfony plugin:install -c mypearchannel sfGuardPlugin</p>
+<p>&nbsp;&nbsp;&nbsp; Or you can use the channel/package notation:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony plugin:install mypearchannel/sfGuardPlugin</p>
+<p>&nbsp;&nbsp;&nbsp; You can also install PEAR packages hosted on a website:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony plugin:install <a href="http://somewhere.example.com/sfGuardPlugin-1.0.0.tgz">http://somewhere.example.com/sfGuardPlugin-1.0.0.tgz</a></p>
+<p>&nbsp;&nbsp;&nbsp; Or local PEAR packages:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony plugin:install /home/fabien/plugins/sfGuardPlugin-1.0.0.tgz</p>
+<p>&nbsp;&nbsp;&nbsp; If the plugin contains some web content (images, stylesheets or javascripts),<br />&nbsp;&nbsp;&nbsp; the task creates a %name% symbolic link for those assets under web/.<br />&nbsp;&nbsp;&nbsp; On Windows, the task copy all the files to the web/%name% directory.</p>
+<p>./symfony help plugin:list</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony plugin:list</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: plugin-list</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The plugin:list task lists all installed plugins:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony plugin:list</p>
+<p>&nbsp;&nbsp;&nbsp; It also gives the channel and version for each plugin.</p>
+<p>./symfony help plugin:publish-assets</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony plugin:publish-assets [--core-only] [--symfony-lib-dir="..."]</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;core-only If set only core plugins will publish their assets<br />&nbsp;&nbsp;&nbsp; &ndash;symfony-lib-dir The symfony lib dir</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The plugin:publish-assets task will publish web assets from all plugins.</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony plugin:publish-assets</p>
+<p>&nbsp;&nbsp;&nbsp; In fact this will send the plugin.post_install event to each plugin.</p>
+<p>./symfony help plugin:uninstall</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony plugin:uninstall [--channel|-c="..."] [--install_deps|-d] name</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: plugin-uninstall</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; name The plugin name</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;channel (-c) The PEAR channel name<br />&nbsp;&nbsp;&nbsp; &ndash;install_deps (-d) Whether to force installation of dependencies</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The plugin:uninstall task uninstalls a plugin:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony plugin:uninstall sfGuardPlugin</p>
+<p>&nbsp;&nbsp;&nbsp; The default channel is symfony.</p>
+<p>&nbsp;&nbsp;&nbsp; You can also uninstall a plugin which has a different channel:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony plugin:uninstall &ndash;channel=mypearchannel sfGuardPlugin</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony plugin:uninstall -c mypearchannel sfGuardPlugin</p>
+<p>&nbsp;&nbsp;&nbsp; Or you can use the channel/package notation:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony plugin:uninstall mypearchannel/sfGuardPlugin</p>
+<p>&nbsp;&nbsp;&nbsp; You can get the PEAR channel name of a plugin by launching the<br />&nbsp;&nbsp;&nbsp; plugin:list] task.</p>
+<p>&nbsp;&nbsp;&nbsp; If the plugin contains some web content (images, stylesheets or javascripts),<br />&nbsp;&nbsp;&nbsp; the task also removes the [web/%name% symbolic link (on *nix)<br />&nbsp;&nbsp;&nbsp; or directory (on Windows).</p>
+<p>./symfony help plugin:upgrade</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony plugin:upgrade [--stability|-s="..."] [--release|-r="..."] [--channel|-c="..."] name</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: plugin-upgrade</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; name The plugin name</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;stability (-s) The preferred stability (stable, beta, alpha)<br />&nbsp;&nbsp;&nbsp; &ndash;release (-r) The preferred version<br />&nbsp;&nbsp;&nbsp; &ndash;channel (-c) The PEAR channel name</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The plugin:upgrade task tries to upgrade a plugin:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony plugin:upgrade sfGuardPlugin</p>
+<p>&nbsp;&nbsp;&nbsp; The default channel is symfony.</p>
+<p>&nbsp;&nbsp;&nbsp; If the plugin contains some web content (images, stylesheets or javascripts),<br />&nbsp;&nbsp;&nbsp; the task also updates the web/%name% directory content on Windows.</p>
+<p>&nbsp;&nbsp;&nbsp; See plugin:install for more information about the format of the plugin name and options.</p>
+<p>./symfony help project:clear-controllers</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony project:clear-controllers</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: clear-controllers</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The project:clear-controllers task clears all non production environment<br />&nbsp;&nbsp;&nbsp; controllers:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony project:clear-controllers</p>
+<p>&nbsp;&nbsp;&nbsp; You can use this task on a production server to remove all front<br />&nbsp;&nbsp;&nbsp; controller scripts except the production ones.</p>
+<p>&nbsp;&nbsp;&nbsp; If you have two applications named frontend and backend,<br />&nbsp;&nbsp;&nbsp; you have four default controller scripts in web/:</p>
+<p>&nbsp;&nbsp;&nbsp; index.php<br />&nbsp;&nbsp;&nbsp; frontend_dev.php<br />&nbsp;&nbsp;&nbsp; backend.php<br />&nbsp;&nbsp;&nbsp; backend_dev.php</p>
+<p>&nbsp;&nbsp;&nbsp; After executing the project:clear-controllers task, two front<br />&nbsp;&nbsp;&nbsp; controller scripts are left in web/:</p>
+<p>&nbsp;&nbsp;&nbsp; index.php<br />&nbsp;&nbsp;&nbsp; backend.php</p>
+<p>&nbsp;&nbsp;&nbsp; Those two controllers are safe because debug mode and the web debug<br />&nbsp;&nbsp;&nbsp; toolbar are disabled.</p>
+<p>./symfony help project:deploy</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony project:deploy [--go] [--rsync-dir="..."] [--rsync-options[="..."]] server</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: sync</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; server The server name</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;go Do the deployment<br />&nbsp;&nbsp;&nbsp; &ndash;rsync-dir The directory where to look for rsync*.txt files (default: config)<br />&nbsp;&nbsp;&nbsp; &ndash;rsync-options To options to pass to the rsync executable (default: -azC &ndash;force &ndash;delete)</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The project:deploy task deploys a project on a server:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony project:deploy production</p>
+<p>&nbsp;&nbsp;&nbsp; The server must be configured in config/properties.ini:</p>
+<p>&nbsp;&nbsp;&nbsp; [production]<br />&nbsp;&nbsp;&nbsp; host=www.example.com<br />&nbsp;&nbsp;&nbsp; port=22<br />&nbsp;&nbsp;&nbsp; user=fabien<br />&nbsp;&nbsp;&nbsp; dir=/var/www/sfblog/<br />&nbsp;&nbsp;&nbsp; type=rsync</p>
+<p>&nbsp;&nbsp;&nbsp; To automate the deployment, the task uses rsync over SSH.<br />&nbsp;&nbsp;&nbsp; You must configure SSH access with a key or configure the password<br />&nbsp;&nbsp;&nbsp; in config/properties.ini.</p>
+<p>&nbsp;&nbsp;&nbsp; By default, the task is in dry-mode. To do a real deployment, you<br />&nbsp;&nbsp;&nbsp; must pass the &ndash;go option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony project:deploy &ndash;go production</p>
+<p>&nbsp;&nbsp;&nbsp; Files and directories configured in config/rsync_exclude.txt are<br />&nbsp;&nbsp;&nbsp; not deployed:</p>
+<p>&nbsp;&nbsp;&nbsp; .svn<br />&nbsp;&nbsp;&nbsp; /web/uploads/*<br />&nbsp;&nbsp;&nbsp; /cache/*<br />&nbsp;&nbsp;&nbsp; /log/*</p>
+<p>&nbsp;&nbsp;&nbsp; You can also create a rsync.txt and rsync_include.txt files.</p>
+<p>&nbsp;&nbsp;&nbsp; If you need to customize the rsync*.txt files based on the server,<br />&nbsp;&nbsp;&nbsp; you can pass a rsync-dir option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony project:deploy &ndash;go &ndash;rsync-dir=config/production production</p>
+<p>&nbsp;&nbsp;&nbsp; Last, you can specify the options passed to the rsync executable, using the<br />&nbsp;&nbsp;&nbsp; rsync-options option (defaults are -azC):</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony project:deploy &ndash;go &ndash;rsync-options=avz</p>
+<p>./symfony help project:disable</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony project:disable application env</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: disable</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; application The application name<br />&nbsp;&nbsp;&nbsp; env The environment name</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The project:disable task disables an application for a specific environment:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony project:disable frontend prod</p>
+<p>./symfony help project:enable</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony project:enable application env</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: enable</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; application The application name<br />&nbsp;&nbsp;&nbsp; env The environment name</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The project:enable task enables an application for a specific environment:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony project:enable frontend prod</p>
+<p>./symfony help project:freeze</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony project:freeze symfony_data_dir</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: freeze</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; symfony_data_dir The symfony data directory</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The project:freeze task copies all the symfony core files to<br />&nbsp;&nbsp;&nbsp; the current project:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony project:freeze /path/to/symfony/data/directory</p>
+<p>&nbsp;&nbsp;&nbsp; The task takes a mandatory argument of the path to the symfony data<br />&nbsp;&nbsp;&nbsp; directory.</p>
+<p>&nbsp;&nbsp;&nbsp; The task also changes config/config.php to switch to the<br />&nbsp;&nbsp;&nbsp; embedded symfony files.</p>
+<p>./symfony help project:permissions</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony project:permissions</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: permissions, fix-perms</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The project:permissions task fixes directory permissions:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony project:permissions</p>
+<p>./symfony help project:unfreeze</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony project:unfreeze</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: unfreeze</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The project:unfreeze task removes all the symfony core files from<br />&nbsp;&nbsp;&nbsp; the current project:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony project:unfreeze</p>
+<p>&nbsp;&nbsp;&nbsp; The task also changes config/config.php to switch to the<br />&nbsp;&nbsp;&nbsp; old symfony files used before the project:freeze command was used.</p>
+<p>./symfony help project:upgrade1.1</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony project:upgrade1.1</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The project:upgrade1.1 task upgrades a symfony project<br />&nbsp;&nbsp;&nbsp; based the 1.0 release to the 1.1 symfony release.</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony project:upgrade1.1</p>
+<p>&nbsp;&nbsp;&nbsp; Please read the UPGRADE_TO_1_1 file to have information on what does this task.</p>
+<p>./symfony help project:upgrade1.2</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony project:upgrade1.2</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The project:upgrade1.2 task upgrades a symfony project<br />&nbsp;&nbsp;&nbsp; based on the 1.1 release to the 1.2 symfony release.</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony project:upgrade1.2</p>
+<p>&nbsp;&nbsp;&nbsp; Please read the UPGRADE_TO_1_2 file to have information on what does this task.</p>
+<p>./symfony help propel:build-all</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony propel:build-all [--application[="..."]] [--env="..."] [--connection="..."] [--no-confirmation] [--skip-forms|-F] [--classes-only|-C] [--phing-arg="..."]</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: propel-build-all</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;application The application name (default: 1)<br />&nbsp;&nbsp;&nbsp; &ndash;env The environment (default: dev)<br />&nbsp;&nbsp;&nbsp; &ndash;connection The connection name (default: propel)<br />&nbsp;&nbsp;&nbsp; &ndash;no-confirmation Do not ask for confirmation<br />&nbsp;&nbsp;&nbsp; &ndash;skip-forms (-F) Skip generating forms<br />&nbsp;&nbsp;&nbsp; &ndash;classes-only (-C) Do not initialize the database<br />&nbsp;&nbsp;&nbsp; &ndash;phing-arg Arbitrary phing argument (multiple values allowed)</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The propel:build-all task is a shortcut for five other tasks:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:build-all</p>
+<p>&nbsp;&nbsp;&nbsp; The task is equivalent to:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:build-model<br />&nbsp;&nbsp;&nbsp; ./symfony propel:build-forms<br />&nbsp;&nbsp;&nbsp; ./symfony propel:build-filters<br />&nbsp;&nbsp;&nbsp; ./symfony propel:build-sql<br />&nbsp;&nbsp;&nbsp; ./symfony propel:insert-sql</p>
+<p>&nbsp;&nbsp;&nbsp; See those tasks&rsquo; help pages for more information.</p>
+<p>&nbsp;&nbsp;&nbsp; To bypass confirmation prompts, you can pass the no-confirmation option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:buil-all &ndash;no-confirmation</p>
+<p>&nbsp;&nbsp;&nbsp; To build all classes but skip initializing the database, use the classes-only<br />&nbsp;&nbsp;&nbsp; option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:build-all &ndash;classes-only</p>
+<p>./symfony help propel:build-all-load</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony propel:build-all-load [--application[="..."]] [--env="..."] [--connection="..."] [--no-confirmation] [--skip-forms|-F] [--classes-only|-C] [--phing-arg="..."] [--append] [--dir="..."]</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: propel-build-all-load</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;application The application name (default: 1)<br />&nbsp;&nbsp;&nbsp; &ndash;env The environment (default: dev)<br />&nbsp;&nbsp;&nbsp; &ndash;connection The connection name (default: propel)<br />&nbsp;&nbsp;&nbsp; &ndash;no-confirmation Do not ask for confirmation<br />&nbsp;&nbsp;&nbsp; &ndash;skip-forms (-F) Skip generating forms<br />&nbsp;&nbsp;&nbsp; &ndash;classes-only (-C) Do not initialize the database<br />&nbsp;&nbsp;&nbsp; &ndash;phing-arg Arbitrary phing argument (multiple values allowed)<br />&nbsp;&nbsp;&nbsp; &ndash;append Don&rsquo;t delete current data in the database<br />&nbsp;&nbsp;&nbsp; &ndash;dir The directories to look for fixtures (multiple values allowed)</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The propel:build-all-load task is a shortcut for two other tasks:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:build-all-load</p>
+<p>&nbsp;&nbsp;&nbsp; The task is equivalent to:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:build-all<br />&nbsp;&nbsp;&nbsp; ./symfony propel:data-load</p>
+<p>&nbsp;&nbsp;&nbsp; See those tasks&rsquo; help pages for more information.</p>
+<p>&nbsp;&nbsp;&nbsp; To bypass the confirmation, you can pass the no-confirmation<br />&nbsp;&nbsp;&nbsp; option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:buil-all-load &ndash;no-confirmation</p>
+<p>./symfony help propel:build-filters</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony propel:build-filters [--connection="..."] [--model-dir-name="..."] [--filter-dir-name="..."] [--application[="..."]]</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;connection The connection name (default: propel)<br />&nbsp;&nbsp;&nbsp; &ndash;model-dir-name The model dir name (default: model)<br />&nbsp;&nbsp;&nbsp; &ndash;filter-dir-name The filter form dir name (default: filter)<br />&nbsp;&nbsp;&nbsp; &ndash;application The application name (default: 1)</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The propel:build-filters task creates filter form classes from the schema:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:build-filters</p>
+<p>&nbsp;&nbsp;&nbsp; The task read the schema information in config/*schema.xml and/or<br />&nbsp;&nbsp;&nbsp; config/*schema.yml from the project and all installed plugins.</p>
+<p>&nbsp;&nbsp;&nbsp; The task use the propel connection as defined in config/databases.yml.<br />&nbsp;&nbsp;&nbsp; You can use another connection by using the &ndash;connection option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:build-filters &ndash;connection=&rdquo;name&rdquo;</p>
+<p>&nbsp;&nbsp;&nbsp; The model filter form classes files are created in lib/filter.</p>
+<p>&nbsp;&nbsp;&nbsp; This task never overrides custom classes in lib/filter.<br />&nbsp;&nbsp;&nbsp; It only replaces base classes generated in lib/filter/base.</p>
+<p>./symfony help propel:build-forms</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony propel:build-forms [--connection="..."] [--model-dir-name="..."] [--form-dir-name="..."] [--application[="..."]]</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;connection The connection name (default: propel)<br />&nbsp;&nbsp;&nbsp; &ndash;model-dir-name The model dir name (default: model)<br />&nbsp;&nbsp;&nbsp; &ndash;form-dir-name The form dir name (default: form)<br />&nbsp;&nbsp;&nbsp; &ndash;application The application name (default: 1)</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The propel:build-forms task creates form classes from the schema:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:build-forms</p>
+<p>&nbsp;&nbsp;&nbsp; The task read the schema information in config/*schema.xml and/or<br />&nbsp;&nbsp;&nbsp; config/*schema.yml from the project and all installed plugins.</p>
+<p>&nbsp;&nbsp;&nbsp; The task use the propel connection as defined in config/databases.yml.<br />&nbsp;&nbsp;&nbsp; You can use another connection by using the &ndash;connection option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:build-forms &ndash;connection=&rdquo;name&rdquo;</p>
+<p>&nbsp;&nbsp;&nbsp; The model form classes files are created in lib/form.</p>
+<p>&nbsp;&nbsp;&nbsp; This task never overrides custom classes in lib/form.<br />&nbsp;&nbsp;&nbsp; It only replaces base classes generated in lib/form/base.</p>
+<p>./symfony help propel:build-model</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony propel:build-model [--phing-arg="..."]</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: propel-build-model</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;phing-arg Arbitrary phing argument (multiple values allowed)</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The propel:build-model task creates model classes from the schema:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:build-model</p>
+<p>&nbsp;&nbsp;&nbsp; The task read the schema information in config/*schema.xml and/or<br />&nbsp;&nbsp;&nbsp; config/*schema.yml from the project and all installed plugins.</p>
+<p>&nbsp;&nbsp;&nbsp; You mix and match YML and XML schema files. The task will convert<br />&nbsp;&nbsp;&nbsp; YML ones to XML before calling the Propel task.</p>
+<p>&nbsp;&nbsp;&nbsp; The model classes files are created in lib/model.</p>
+<p>&nbsp;&nbsp;&nbsp; This task never overrides custom classes in lib/model.<br />&nbsp;&nbsp;&nbsp; It only replaces files in lib/model/om and lib/model/map.</p>
+<p>./symfony help propel:build-schema</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony propel:build-schema [--application[="..."]] [--env="..."] [--connection="..."] [--xml] [--phing-arg="..."]</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: propel-build-schema</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;application The application name (default: 1)<br />&nbsp;&nbsp;&nbsp; &ndash;env The environment (default: cli)<br />&nbsp;&nbsp;&nbsp; &ndash;connection The connection name<br />&nbsp;&nbsp;&nbsp; &ndash;xml Creates an XML schema instead of a YML one<br />&nbsp;&nbsp;&nbsp; &ndash;phing-arg Arbitrary phing argument (multiple values allowed)</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The propel:build-schema task introspects a database to create a schema:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:build-schema</p>
+<p>&nbsp;&nbsp;&nbsp; By default, the task creates a YML file, but you can also create a XML file:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony &ndash;xml propel:build-schema</p>
+<p>&nbsp;&nbsp;&nbsp; The XML format contains more information than the YML one.</p>
+<p>./symfony help propel:build-sql</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony propel:build-sql [--phing-arg="..."]</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: propel-build-sql</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;phing-arg Arbitrary phing argument (multiple values allowed)</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The propel:build-sql task creates SQL statements for table creation:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:build-sql</p>
+<p>&nbsp;&nbsp;&nbsp; The generated SQL is optimized for the database configured in config/propel.ini:</p>
+<p>&nbsp;&nbsp;&nbsp; propel.database = mysql</p>
+<p>./symfony help propel:data-dump</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony propel:data-dump [--application[="..."]] [--env="..."] [--connection="..."] [--classes="..."] [target]</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: propel-dump-data</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; target The target filename</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;application The application name (default: 1)<br />&nbsp;&nbsp;&nbsp; &ndash;env The environement (default: cli)<br />&nbsp;&nbsp;&nbsp; &ndash;connection The connection name (default: propel)<br />&nbsp;&nbsp;&nbsp; &ndash;classes The class names to dump (separated by a colon)</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The propel:data-dump task dumps database data:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:data-dump &gt; data/fixtures/dump.yml</p>
+<p>&nbsp;&nbsp;&nbsp; By default, the task outputs the data to the standard output,<br />&nbsp;&nbsp;&nbsp; but you can also pass a filename as a second argument:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:data-dump dump.yml</p>
+<p>&nbsp;&nbsp;&nbsp; The task will dump data in data/fixtures/%target%<br />&nbsp;&nbsp;&nbsp; (data/fixtures/dump.yml in the example).</p>
+<p>&nbsp;&nbsp;&nbsp; The dump file is in the YML format and can be re-imported by using<br />&nbsp;&nbsp;&nbsp; the propel:data-dump task.</p>
+<p>&nbsp;&nbsp;&nbsp; By default, the task use the propel connection as defined in config/databases.yml.<br />&nbsp;&nbsp;&nbsp; You can use another connection by using the connection option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:data-dump &ndash;connection=&rdquo;name&rdquo;</p>
+<p>&nbsp;&nbsp;&nbsp; If you only want to dump some classes, use the classes option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:data-dump &ndash;classes=&rdquo;Article,Category&rdquo;</p>
+<p>&nbsp;&nbsp;&nbsp; If you want to use a specific database configuration from an application, you can use<br />&nbsp;&nbsp;&nbsp; the application option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:data-dump &ndash;application=frontend</p>
+<p>./symfony help propel:data-load</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony propel:data-load [--application[="..."]] [--env="..."] [--append] [--connection="..."] [--dir="..."]</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: propel-load-data</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;application The application name (default: 1)<br />&nbsp;&nbsp;&nbsp; &ndash;env The environment (default: cli)<br />&nbsp;&nbsp;&nbsp; &ndash;append Don&rsquo;t delete current data in the database<br />&nbsp;&nbsp;&nbsp; &ndash;connection The connection name (default: propel)<br />&nbsp;&nbsp;&nbsp; &ndash;dir The directories to look for fixtures (multiple values allowed)</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The propel:data-load task loads data fixtures into the database:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:data-load</p>
+<p>&nbsp;&nbsp;&nbsp; The task loads data from all the files found in data/fixtures/.</p>
+<p>&nbsp;&nbsp;&nbsp; If you want to load data from other directories, you can use<br />&nbsp;&nbsp;&nbsp; the &ndash;dir option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:data-load &ndash;dir=&rdquo;data/fixtures&rdquo; &ndash;dir=&rdquo;data/data&rdquo;</p>
+<p>&nbsp;&nbsp;&nbsp; The task use the propel connection as defined in config/databases.yml.<br />&nbsp;&nbsp;&nbsp; You can use another connection by using the &ndash;connection option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:data-load &ndash;connection=&rdquo;name&rdquo;</p>
+<p>&nbsp;&nbsp;&nbsp; If you don&rsquo;t want the task to remove existing data in the database,<br />&nbsp;&nbsp;&nbsp; use the &ndash;append option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:data-load &ndash;append</p>
+<p>&nbsp;&nbsp;&nbsp; If you want to use a specific database configuration from an application, you can use<br />&nbsp;&nbsp;&nbsp; the application option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:data-load &ndash;application=frontend</p>
+<p>./symfony help propel:generate-admin</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony propel:generate-admin [--module="..."] [--theme="..."] [--singular="..."] [--plural="..."] [--env="..."] application route_or_model</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; application The application name<br />&nbsp;&nbsp;&nbsp; route_or_model The route name or the model class</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;module The module name<br />&nbsp;&nbsp;&nbsp; &ndash;theme The theme name (default: admin)<br />&nbsp;&nbsp;&nbsp; &ndash;singular The singular name<br />&nbsp;&nbsp;&nbsp; &ndash;plural The plural name<br />&nbsp;&nbsp;&nbsp; &ndash;env The environment (default: dev)</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The propel:generate-admin task generates a Propel admin module:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:generate-admin frontend Article</p>
+<p>&nbsp;&nbsp;&nbsp; The task creates a module in the %frontend% application for the<br />&nbsp;&nbsp;&nbsp; %Article% model.</p>
+<p>&nbsp;&nbsp;&nbsp; The task creates a route for you in the application routing.yml.</p>
+<p>&nbsp;&nbsp;&nbsp; You can also generate a Propel admin module by passing a route name:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:generate-admin frontend article</p>
+<p>&nbsp;&nbsp;&nbsp; The task creates a module in the %frontend% application for the<br />&nbsp;&nbsp;&nbsp; %article% route definition found in routing.yml.</p>
+<p>&nbsp;&nbsp;&nbsp; For the filters and batch actions to work properly, you need to add<br />&nbsp;&nbsp;&nbsp; the wildcard option to the route:</p>
+<p>&nbsp;&nbsp;&nbsp; article:<br />&nbsp;&nbsp;&nbsp; class: sfPropelRouteCollection<br />&nbsp;&nbsp;&nbsp; options:<br />&nbsp;&nbsp;&nbsp; model: Article<br />&nbsp;&nbsp;&nbsp; with_wildcard_routes: true</p>
+<p>./symfony help propel:generate-module-for-route</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony propel:generate-module-for-route [--theme="..."] [--non-verbose-templates] [--singular="..."] [--plural="..."] [--env="..."] application route</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; application The application name<br />&nbsp;&nbsp;&nbsp; route The route name</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;theme The theme name (default: default)<br />&nbsp;&nbsp;&nbsp; &ndash;non-verbose-templates Generate non verbose templates<br />&nbsp;&nbsp;&nbsp; &ndash;singular The singular name<br />&nbsp;&nbsp;&nbsp; &ndash;plural The plural name<br />&nbsp;&nbsp;&nbsp; &ndash;env The environment (default: dev)</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The propel:generate-module-for-route task generates a Propel module for a route definition:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:generate-module-for-route frontend article</p>
+<p>&nbsp;&nbsp;&nbsp; The task creates a module in the %frontend% application for the<br />&nbsp;&nbsp;&nbsp; %article% route definition found in routing.yml.</p>
+<p>./symfony help propel:graphviz</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony propel:graphviz [--phing-arg="..."]</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;phing-arg Arbitrary phing argument (multiple values allowed)</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The propel:graphviz task creates a graphviz DOT<br />&nbsp;&nbsp;&nbsp; visualization for automatic graph drawing of object model:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:graphviz</p>
+<p>./symfony help propel:init-admin</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony propel:init-admin [--theme="..."] application module model</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: propel-init-admin</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; application The application name<br />&nbsp;&nbsp;&nbsp; module The module name<br />&nbsp;&nbsp;&nbsp; model The model class name</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;theme The theme name (default: default)</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The propel:init-admin task generates a Propel admin module:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:init-admin frontend article Article</p>
+<p>&nbsp;&nbsp;&nbsp; The task creates a %module% module in the %application% application<br />&nbsp;&nbsp;&nbsp; for the model class %model%.</p>
+<p>&nbsp;&nbsp;&nbsp; The created module is an empty one that inherit its actions and templates from<br />&nbsp;&nbsp;&nbsp; a runtime generated module in %sf_app_cache_dir%/modules/auto%module%.</p>
+<p>&nbsp;&nbsp;&nbsp; The generator can use a customized theme by using the &ndash;theme option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:init-admin &ndash;theme=&rdquo;custom&rdquo; frontend article Article</p>
+<p>./symfony help propel:insert-sql</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony propel:insert-sql [--application[="..."]] [--env="..."] [--connection="..."] [--no-confirmation] [--phing-arg="..."]</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: propel-insert-sql</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;application The application name (default: 1)<br />&nbsp;&nbsp;&nbsp; &ndash;env The environment (default: cli)<br />&nbsp;&nbsp;&nbsp; &ndash;connection The connection name<br />&nbsp;&nbsp;&nbsp; &ndash;no-confirmation Do not ask for confirmation<br />&nbsp;&nbsp;&nbsp; &ndash;phing-arg Arbitrary phing argument (multiple values allowed)</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The propel:insert-sql task creates database tables:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:insert-sql</p>
+<p>&nbsp;&nbsp;&nbsp; The task connects to the database and executes all SQL statements<br />&nbsp;&nbsp;&nbsp; found in config/sql/*schema.sql files.</p>
+<p>&nbsp;&nbsp;&nbsp; Before execution, the task will ask you to confirm the execution<br />&nbsp;&nbsp;&nbsp; as it deletes all data in your database.</p>
+<p>&nbsp;&nbsp;&nbsp; To bypass the confirmation, you can pass the &ndash;no-confirmation<br />&nbsp;&nbsp;&nbsp; option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:insert-sql &ndash;no-confirmation</p>
+<p>&nbsp;&nbsp;&nbsp; The task read the database configuration from `databases.yml`.<br />&nbsp;&nbsp;&nbsp; You can use a specific application/environment by passing<br />&nbsp;&nbsp;&nbsp; an &ndash;application or &ndash;env option.</p>
+<p>&nbsp;&nbsp;&nbsp; You can also use the &ndash;connection option if you want to<br />&nbsp;&nbsp;&nbsp; only load SQL statements for a given connection.</p>
+<p>./symfony help propel:schema-to-xml</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony propel:schema-to-xml</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: propel-convert-yml-schema</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The propel:schema-to-xml task converts YML schemas to XML:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:schema-to-xml</p>
+<p>./symfony help propel:schema-to-yml</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony propel:schema-to-yml</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: propel-convert-xml-schema</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The propel:schema-to-yml task converts XML schemas to YML:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony propel:schema-to-yml</p>
+<p>./symfony help test:all</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony test:all</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: test-all</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The test:all task launches all unit and functional tests:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony test:all</p>
+<p>&nbsp;&nbsp;&nbsp; The task launches all tests found in test/.</p>
+<p>&nbsp;&nbsp;&nbsp; If one or more test fail, you can try to fix the problem by launching<br />&nbsp;&nbsp;&nbsp; them by hand or with the test:unit and test:functional task.</p>
+<p>./symfony help test:coverage</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony test:coverage [--detailed] test_name lib_name</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; test_name A test file name or a test directory<br />&nbsp;&nbsp;&nbsp; lib_name A lib file name or a lib directory for wich you want to know the coverage</p>
+<p>&nbsp;&nbsp;&nbsp; 选项:<br />&nbsp;&nbsp;&nbsp; &ndash;detailed Output detailed information</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The test:coverage task outputs the code coverage<br />&nbsp;&nbsp;&nbsp; given a test file or test directory<br />&nbsp;&nbsp;&nbsp; and a lib file or lib directory for which you want code<br />&nbsp;&nbsp;&nbsp; coverage:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony test:coverage test/unit/model lib/model</p>
+<p>&nbsp;&nbsp;&nbsp; To output the lines not covered, pass the &ndash;detailed option:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony test:coverage &ndash;detailed test/unit/model lib/model</p>
+<p>./symfony help test:functional</p>
+<p>&nbsp;&nbsp;&nbsp; 语法:<br />&nbsp;&nbsp;&nbsp; symfony test:functional application [controller1] &hellip; [nameN]</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: test-functional</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; application The application name<br />&nbsp;&nbsp;&nbsp; controller The controller name</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The test:functional task launches functional tests for a<br />&nbsp;&nbsp;&nbsp; given application:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony test:functional frontend</p>
+<p>&nbsp;&nbsp;&nbsp; The task launches all tests found in test/functional/%application%.</p>
+<p>&nbsp;&nbsp;&nbsp; You can launch all functional tests for a specific controller by<br />&nbsp;&nbsp;&nbsp; giving a controller name:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony test:functional frontend article</p>
+<p>&nbsp;&nbsp;&nbsp; You can also launch all functional tests for several controllers:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony test:functional frontend article comment</p>
+<p><br />./symfony help test:unit</p>
+<p>&nbsp;&nbsp;&nbsp; 使用方法:<br />&nbsp;&nbsp;&nbsp; symfony test:unit [name1] &hellip; [nameN]</p>
+<p>&nbsp;&nbsp;&nbsp; 别名: test-unit</p>
+<p>&nbsp;&nbsp;&nbsp; 参数:<br />&nbsp;&nbsp;&nbsp; name The test name</p>
+<p>&nbsp;&nbsp;&nbsp; 描述:<br />&nbsp;&nbsp;&nbsp; The test:unit task launches unit tests:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony test:unit</p>
+<p>&nbsp;&nbsp;&nbsp; The task launches all tests found in test/unit.</p>
+<p>&nbsp;&nbsp;&nbsp; You can launch unit tests for a specific name:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony test:unit strtolower</p>
+<p>&nbsp;&nbsp;&nbsp; You can also launch unit tests for several names:</p>
+<p>&nbsp;&nbsp;&nbsp; ./symfony test:unit strtolower strtoupper</p>
+<p>./symfony -V</p>
+<p>&nbsp;&nbsp;&nbsp; symfony version 1.2.4-DEV (/home/maker/www/symfony/lib)</p>
+					
+				  
+				</div>
+			</div>
+  
+			
+
+			
+        </div>
+    </div>
+</body>
+</html>
